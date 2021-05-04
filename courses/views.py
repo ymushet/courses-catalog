@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
 
-# Create your views here.
+from courses.models import Course
+from courses.serializers import CourseSerializer
+
+
+class CourseViewSet(viewsets.ModelViewSet):
+    """
+    View set for Course Model
+    """
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+    permission_classes = [permissions.AllowAny, ]
