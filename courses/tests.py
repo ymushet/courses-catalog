@@ -31,13 +31,6 @@ class CourseModelTestCase(TestCase):
 class CoursesViewSetTestCase(TestCase):
     def setUp(self):
         Course.objects.create(
-            name='Yalantis Python School',
-            lectures=10,
-            start_at=datetime.datetime(2021, 5, 14, 19, 0, 0, tzinfo=pytz.UTC),
-            end_at=datetime.datetime(2021, 8, 14, 21, 0, 0, tzinfo=pytz.UTC),
-        )
-
-        Course.objects.create(
             name='Yalantis Golang school',
             lectures=10,
             start_at=datetime.datetime(2021, 5, 14, 19, 0, 0, tzinfo=pytz.UTC),
