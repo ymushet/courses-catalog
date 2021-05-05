@@ -19,7 +19,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]
-    search_fields = ['name', 'author', ]
+    search_fields = ['name', ]
     filterset_class = CourseViewFilter
 
     def perform_create(self, serializer):
