@@ -62,6 +62,6 @@ Course view support search, ordering, and filtering by start and end dates.
 
 To see course details visit
 
-> http://127.0.0.1:8000/<ind:id>
+> http://127.0.0.1:8000/id
 
 If you are log in as a course author you can UPDATE course info with PUT request or delete it with DELETE request. 
