@@ -1,14 +1,15 @@
 from django.contrib.auth.models import User
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, permissions, generics, filters
-from courses.permissions import IsAuthorOrReadOnly
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from django_filters.rest_framework import DjangoFilterBackend
 
-from courses.models import Course
-from courses.serializers import CourseSerializer, UserSerializer
 from courses.filters import CourseViewFilter
+from courses.models import Course
+from courses.permissions import IsAuthorOrReadOnly
+from courses.serializers import CourseSerializer, UserSerializer
+
 
 class CourseViewSet(viewsets.ModelViewSet):
     """

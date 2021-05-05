@@ -13,7 +13,7 @@ class Course(models.Model):
                                                 ])
 
     class Meta:
-        ordering = ('start_at', )
+        ordering = ('start_at',)
 
     def __str__(self):
         return f'{self.name} course has {self.lectures} lectures'

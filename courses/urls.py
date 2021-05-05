@@ -1,5 +1,6 @@
-from rest_framework import routers
 from django.urls import path
+from rest_framework import routers
+
 from courses.views import CourseViewSet, UserList, UserDetail, api_root
 
 router = routers.SimpleRouter()

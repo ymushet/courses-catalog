@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from django.urls import reverse
 from rest_framework import status
+
 from courses.models import Course
 from courses.serializers import CourseSerializer
 
